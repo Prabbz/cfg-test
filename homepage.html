@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="homepage.css">
+<body>
+
+<h1><span data-shadow-text="Dates in LDN">Dates in LDN</span></h1>
+
+<!-- Slide Show -->
+<section>
+  <div>
+  <img class="SlideShow" src="http://blog.grosvenorcasinos.com/wp-content/uploads/2014/09/Circus.jpg"
+  style="width:75%">
+  <img class="SlideShow" src="https://www.standard.co.uk/s3fs-public/styles/hero_tablet/public/thumbnails/image/2016/08/09/17/duckwaffle-main.jpg"
+  style="width:75%">
+  <img class="SlideShow" src="http://onthethames.net/wp-content/uploads/2014/09/bateaux-afternoon-tea-buyagift.jpg"
+  style="width:75%">
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("SlideShow");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+</script>
+</div>
+</script>
+</section>
+</body>
+</html>
