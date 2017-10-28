@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Classes</key>
+	<dict>
+		<key>BrowserDocument</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>URLString</key>
+				<dict>
+					<key>Description</key>
+					<string>The current URL of the document.</string>
+					<key>Name</key>
+					<string>URL</string>
+				</dict>
+				<key>source</key>
+				<dict>
+					<key>Description</key>
+					<string>The HTML source of the web page currently loaded in the document.</string>
+					<key>Name</key>
+					<string>source</string>
+				</dict>
+				<key>text</key>
+				<dict>
+					<key>Description</key>
+					<string>The text of the web page currently loaded in the document. Modifications to text aren't reflected on the web page.</string>
+					<key>Name</key>
+					<string>text</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A Safari document representing the active tab in a window.</string>
+			<key>Name</key>
+			<string>document</string>
+			<key>PluralName</key>
+			<string>documents</string>
+		</dict>
+		<key>BrowserTabViewItem</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>URLString</key>
+				<dict>
+					<key>Description</key>
+					<string>The current URL of the tab.</string>
+					<key>Name</key>
+					<string>URL</string>
+				</dict>
+				<key>isVisible</key>
+				<dict>
+					<key>Description</key>
+					<string>Whether the tab is currently visible.</string>
+					<key>Name</key>
+					<string>visible</string>
+				</dict>
+				<key>orderedIndex</key>
+				<dict>
+					<key>Description</key>
+					<string>The index of the tab, ordered left to right.</string>
+					<key>Name</key>
+					<string>index</string>
+				</dict>
+				<key>source</key>
+				<dict>
+					<key>Description</key>
+					<string>The HTML source of the web page currently loaded in the tab.</string>
+					<key>Name</key>
+					<string>source</string>
+				</dict>
+				<key>text</key>
+				<dict>
+					<key>Description</key>
+					<string>The text of the web page currently loaded in the tab. Modifications to text aren't reflected on the web page.</string>
+					<key>Name</key>
+					<string>text</string>
+				</dict>
+				<key>title</key>
+				<dict>
+					<key>Description</key>
+					<string>The name of the tab.</string>
+					<key>Name</key>
+					<string>name</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A Safari window tab.</string>
+			<key>Name</key>
+			<string>tab</string>
+			<key>PluralName</key>
+			<string>tabs</string>
+		</dict>
+		<key>BrowserWindow</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>currentTabViewItem</key>
+				<dict>
+					<key>Description</key>
+					<string>The current tab.</string>
+					<key>Name</key>
+					<string>current tab</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>A Safari window.</string>
+			<key>Name</key>
+			<string>window</string>
+			<key>PluralName</key>
+			<string>windows</string>
+		</dict>
+	</dict>
+	<key>Commands</key>
+	<dict>
+		<key>AddReadingListItem</key>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>PreviewText</key>
+				<dict>
+					<key>Description</key>
+					<string>Preview text for the Reading List item, usually the first few sentences of the article</string>
+					<key>Name</key>
+					<string>and preview text</string>
+				</dict>
+				<key>Title</key>
+				<dict>
+					<key>Description</key>
+					<string>Title of the Reading List item</string>
+					<key>Name</key>
+					<string>with title</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Add a new Reading List item with the given URL. Allows a custom title and preview text to be specified.</string>
+			<key>Name</key>
+			<string>add reading list item</string>
+			<key>UnnamedArgument</key>
+			<dict>
+				<key>Description</key>
+				<string>URL of the Reading List item</string>
+			</dict>
+		</dict>
+		<key>DoJavaScript</key>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>Target</key>
+				<dict>
+					<key>Description</key>
+					<string>The tab that the JavaScript should be evaluated in.</string>
+					<key>Name</key>
+					<string>in</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Applies a string of JavaScript code to a document.</string>
+			<key>Name</key>
+			<string>do JavaScript</string>
+			<key>UnnamedArgument</key>
+			<dict>
+				<key>Description</key>
+				<string>The JavaScript code to evaluate.</string>
+			</dict>
+		</dict>
+		<key>EmailContents</key>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>Target</key>
+				<dict>
+					<key>Description</key>
+					<string>The tab to send.</string>
+					<key>Name</key>
+					<string>of</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Emails the contents of a tab.</string>
+			<key>Name</key>
+			<string>email contents</string>
+		</dict>
+		<key>SearchTheWeb</key>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>Query</key>
+				<dict>
+					<key>Description</key>
+					<string>The query to search for.</string>
+					<key>Name</key>
+					<string>for</string>
+				</dict>
+				<key>Target</key>
+				<dict>
+					<key>Description</key>
+					<string>The tab that the search results should shown in.</string>
+					<key>Name</key>
+					<string>in</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Searches the web using Safari's current search provider.</string>
+			<key>Name</key>
+			<string>search the web</string>
+		</dict>
+		<key>ShowBookmarks</key>
+		<dict>
+			<key>Description</key>
+			<string>Shows Safari's bookmarks.</string>
+			<key>Name</key>
+			<string>show bookmarks</string>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>Safari specific classes</string>
+	<key>Name</key>
+	<string>Safari suite</string>
+</dict>
+</plist>
